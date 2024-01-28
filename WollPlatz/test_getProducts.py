@@ -1,3 +1,4 @@
+from WollPlatz.writeCsv import writeCsv
 from getProducts import getProducts
 import sys
 import os
@@ -9,6 +10,8 @@ def main():
         sys.exit(1)
 
     products=getProducts(query)
+    filename=f"{query}.csv"
+    writeCsv(products, filename)
     print(f"({products})")
 
 if __name__ == "__main__":
