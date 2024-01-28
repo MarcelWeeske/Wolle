@@ -13,4 +13,4 @@ Die einzelnen integrierten Onlineshops, werden als Klasse in der index.py des je
 
         login, getProducts, addToCart, validateShoppingCart und order 
 
-Die Suchergebnisse werden auf einer Datenbank gespeichert, hier für den Zweck der Codingchallenge hätte ich die Ergebnisse in einer einfachen CSV Datei gespeichert, da das Portal mit Cloudflare geblockt ist, konnte ich die Übung hier aber leider nicht zu ende führen. 
+Die Suchergebnisse werden auf einer Datenbank gespeichert, hier für den Zweck der Codingchallenge habe ich die Ergebnisse in einer einfachen CSV Datei gespeichert, da das Portal mit Cloudflare geblockt ist, habe ich beispielsweise eine CSV datei mit Mockdata aus den tests abgespeichert. 
