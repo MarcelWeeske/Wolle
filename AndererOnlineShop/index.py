@@ -1,16 +1,16 @@
-from WollPlatz.getProducts import getProducts
 
 
-class Wollplatz: 
+
+class AndererOnlineShop: 
     def login(self): 
         pass
 
     def getProducts(self, query): 
-        return getProducts(query)
+        pass
     
     def addToCart(self, product): 
         pass
-    
+
     def validateShoppingCart(self): 
         pass
 

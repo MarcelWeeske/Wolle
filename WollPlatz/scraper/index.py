@@ -16,7 +16,7 @@ def readProductsFromHtml(htmlContent):
         anchor = innerProductDiv.find('a')
         availabilityUrl= anchor.get('href')
         grossPriceSpan= productDiv.find('span', class_='productlist-price')
-        grossPrice=grossPriceSpan.find('span',class_='product-price-amount').text.strip()
+        grossPrice=float(grossPriceSpan.find('span',class_='product-price-amount').text.strip().replace(',', '.')) if grossPriceSpan else None
         attributesDiv=productDiv.find('div',class_='productlist-usplist')
         attributesList = attributesDiv.find('ul') if attributesDiv else None
         attributes = [li.text.strip() for li in attributesList.find_all('li')] if attributesList else None
@@ -30,7 +30,7 @@ def readProductsFromHtml(htmlContent):
             'netPrice': float(netPrice),
             'availabilityUrl': availabilityUrl,
             'availability': None,
-            'grossPrice': float(grossPrice.replace(',', '.')),
+            'grossPrice': grossPrice,
             'composition': composition,
             'needleStrength': needleStrength
         }

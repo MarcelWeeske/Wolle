@@ -5,6 +5,7 @@ from scraper.index import readAvailabilityFromHtml, readProductsFromHtml
 def getProducts(query:str):
     searchResponse=search(query)
     productList=readProductsFromHtml(searchResponse)
+    print(productList)
 
     for product in productList:
         availability_url = product['availabilityUrl']

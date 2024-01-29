@@ -1,10 +1,11 @@
-import requests
+import cloudscraper
 
+scraper = cloudscraper.create_scraper()
 
 def search(query:str):
-    url="https://www.wollplatz.de/wolle?s=Stylecraft"
+    url="https://www.wollplatz.de/wolle"
     params = {'s': query}
-    response = requests.get(url, params=params)
+    response = scraper.get(url, params=params)
 
     if response.status_code == 200:
         return response.text
@@ -14,7 +15,7 @@ def search(query:str):
 
 
 def getAvailability(url:str):
-    response = requests.get(url)
+    response = scraper.get(url)
 
     if response.status_code == 200:
         return response.text
